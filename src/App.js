@@ -1,10 +1,22 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Task from './components/Task'
+
+const defaultTeskArgs = {
+  task: {
+    id: '1',
+    // id: 1000,
+    title: 'Test Task',
+    state: 'TASK_INBOX',
+    updatedAt: new Date(2021, 0, 1, 9, 0),
+  },
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Task { ...defaultTeskArgs } />
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +29,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
